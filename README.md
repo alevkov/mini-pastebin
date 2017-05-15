@@ -12,6 +12,7 @@ This is a RESTful API that supports the following operations:
 
 - GET /paste/:author
   - Get all pastes by author name
+  - e.g. https://mini-pastebin.herokuapp.com/paste/zachary
 - POST /paste/:author
   - Create a new paste with author name
   - The POST request should include a body with the following format:
