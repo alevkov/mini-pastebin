@@ -65,4 +65,19 @@ router.route('/paste/:id')
 	    })
     });
 
+router.route('/git-pun')
+	.get((req, res) => {
+    	db.Pun.find((err, puns) => {
+        	if (err || puns === null || puns.length === 0) {
+        		res.status(400).send({ error: "No Puns :(" });
+        	} else {
+        		const size = Object.keys(puns).length - 1
+        		const min = Math.ceil(0);
+  				const max = Math.floor(size);
+  				const idx = Math.floor(Math.random() * (max - min)) + min;
+  				res.status(200).send(puns[idx].body);
+        	}
+    	}); 
+	});
+
 export default router;

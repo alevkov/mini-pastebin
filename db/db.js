@@ -9,6 +9,10 @@ const PasteSchema = mongoose.Schema({
 	syntax: String
 });
 
+const PunSchema = mongoose.Schema({
+	body: String
+});
+
 module.exports.startDB = () => {
 	mongoose.connect(constants.DB_PROTOCOL +
         constants.DB_USER + ':' +
@@ -21,6 +25,7 @@ module.exports.startDB = () => {
         console.log("DB User:" + constants.DB_USER);
         // Schema exports
         module.exports.Paste = mongoose.model('Paste', PasteSchema);
+        module.exports.Pun = mongoose.model('Pun', PunSchema);
     });
     return db;
 }
