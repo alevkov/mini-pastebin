@@ -5,6 +5,9 @@
   "scripts": {
     "start": "babel-node ./bin/www --presets es2015,stage-2"
   },
+  "engines": {
+    "node": ">=7.10.0" // intentionally so big version number
+  },
   "dependencies": {
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
