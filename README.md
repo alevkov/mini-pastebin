@@ -14,6 +14,11 @@ This is a RESTful API that supports the following operations:
   - Get all pastes by author name
 - POST /paste/:author
   - Create a new paste with author name
+  - The POST request should include a body with the following format:
+    - title: [String]
+    - body: [String]
+    - author: [String]
+    - syntax: [String] // e.g. C++, Java, etc.
 - DETELE /paste/:id
   - Delete a paste by its unique id
 - PATCH /paste/:id
