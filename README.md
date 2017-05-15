@@ -4,6 +4,10 @@
 
 A small clone of pastebin [Node.js + ES6 + MongoDB]
 
+Link: https://mini-pastebin.herokuapp.com (deployed to Heroku)
+
+Testable with curl and Postman
+
 This is a RESTful API that supports the following operations:
 
 - GET /paste/:author
